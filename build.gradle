@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    
+    // implementation 'org.seleniumhq.selenium:selenium-opera-driver:3.6.0'
+    implementation 'org.seleniumhq.selenium:selenium-firefox-driver:3.6.0'
+
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.13.2'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.3'
+
+
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	
+	testCompileOnly 'org.projectlombok:lombok:1.18.24'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'    
+    testImplementation 'junit:junit:4.13.2'
+}
+
+application {
+    mainClass = 'Enigma.App'
+}
+
+// https://github.com/operasoftware/operachromiumdriver/releases/download/v.104.0.5112.81/operadriver_win64.zip
