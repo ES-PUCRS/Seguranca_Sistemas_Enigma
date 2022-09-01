@@ -39,10 +39,12 @@ public class FileManager {
 
 	public static void write(Marshal marshal, Boolean gen) {
 		instance();
-		String output = Variables.RESULT;
-		if(gen) output = Variables.GENERATEDCONFIGURATION;
+		File output = new File(Variables.OUTPUT);
+		String outputPath = Variables.RESULT;
+		if(gen) outputPath = Variables.GENERATEDCONFIGURATION;
+		if(output.exists()) output.mkdir();
 		try {
-			objectMapper.writeValue(new File(output), marshal);
+			objectMapper.writeValue(new File(outputPath), marshal);
 		} catch (IOException ioe) { ioe.printStackTrace(); }
 	}
 

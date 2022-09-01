@@ -16,6 +16,7 @@ import Enigma.Machine.WebEnigma;
 import Enigma.Machine.Marshal;
 import Enigma.Utils.Generator;
 import Enigma.Utils.Variables;
+import Enigma.Enums.Action;
 
 public class App {
 
@@ -49,7 +50,11 @@ public class App {
 
 			configuration.setMessage(machine.getMessage());
 			configuration.calculateAcceptance();
-			builder.append(configuration.getMessage());
+            if(configuration.getAction() == Action.ENCRYPT)
+                builder.append(configuration.getCiphertext());
+            else
+    			builder.append(configuration.getMessage());
+
 			builder.append(" ");
     	}
    	

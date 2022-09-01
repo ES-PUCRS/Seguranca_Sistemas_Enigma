@@ -1,0 +1,54 @@
+---
+configurations:
+- reflector: "UKWB"
+  action: "DECRYPT"
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: ""
+  message: "LVEAFNO"
+  knownMessage: null
+  ciphertext: "HGNCAZM"
+  acceptance: 0.0
+- reflector: "UKWB"
+  action: "DECRYPT"
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: "AD"
+  message: "LVEDZNO"
+  knownMessage: null
+  ciphertext: "HGNCAZM"
+  acceptance: 0.0
+- reflector: "UKWB"
+  action: "DECRYPT"
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
+  rings: "CEA"
+  plugboard: "AL"
+  message: "YIBOUHP"
+  knownMessage: null
+  ciphertext: "HGNCAZM"
+  acceptance: 0.0
+- reflector: "UKWB"
+  action: "ENCRYPT"
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: "AL"
+  message: "message"
+  knownMessage: null
+  ciphertext: null
+  acceptance: 0.0

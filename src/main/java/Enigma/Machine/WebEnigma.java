@@ -76,7 +76,7 @@ public class WebEnigma {
 		ciphertext(configuration.getCiphertext());
 		reflector(configuration.getReflector());
 		
-		if(configuration.getPlugboard() != null)
+		if(!configuration.getPlugboard().isEmpty())
 			plugboard(configuration.getPlugboard());
 	
 		rotor(1, configuration.getRotors()[0]);
@@ -99,7 +99,10 @@ public class WebEnigma {
 	public String getCiphertext() { return ciphertext.getAttribute("value"); }
 
 	public void plugboard(String pairs) {
-		plugboard.sendKeys(Keys.chord(Keys.CONTROL, "a"), pairs);
+		timeout();
+		if(!plugboard.getAttribute("value").isEmpty())
+			plugboard.sendKeys(Keys.chord(Keys.CONTROL, "a"), Keys.DELETE);
+		plugboard.sendKeys(pairs);
 	}
 
 	public void message(String plaintext) {

@@ -6,50 +6,50 @@ configurations:
   - 2
   - 3
   - 1
-  positions: "QCW"
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: ""
+  ciphertext: HGNCAZM
+
+- action: DECRYPT
+  reflector: UKWB
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: "AD"
+  ciphertext: HGNCAZM
+
+- action: DECRYPT
+  reflector: UKWB
+  rotors:
+  - 2
+  - 3
+  - 1
+  positions: "CEA"
   rings: "CEA"
-  plugboard: "AD"
+  plugboard: "AL"
   ciphertext: HGNCAZM
 
-- action: DECRYPT
+- action: ENCRYPT
   reflector: UKWB
   rotors:
   - 2
   - 3
   - 1
-  positions: "QCW"
-  rings: "EAC"
-  plugboard: "AD"
-  ciphertext: HGNCAZM
+  positions: "CEA"
+  rings: "AAA"
+  plugboard: "AL"
+  message: AVELINO
 
-- action: DECRYPT
-  reflector: UKWB
-  rotors:
-  - 2
-  - 3
-  - 1
-  positions: "AAA"
-  rings: "CEA"
-  plugboard: "AD"
-  ciphertext: HGNCAZM
-
-- action: DECRYPT
-  reflector: UKWB
-  rotors:
-  - 2
-  - 3
-  - 1
-  positions: "AAA"
-  rings: "EAC"
-  plugboard: "AD"
-  ciphertext: HGNCAZM
-
-- action: DECRYPT
-  reflector: UKWB
-  rotors:
-  - 2
-  - 3
-  - 1
-  positions: "AAA"
-  rings: "CEA"
-  ciphertext: HGNCAZM
+# - action: DECRYPT
+#   reflector: UKWB
+#   rotors:
+#   - 2
+#   - 3
+#   - 1
+#   positions: "CEA"
+#   rings: "AAA"
+#   ciphertext: HGNCAZM
